@@ -1,4 +1,3 @@
-let debug = require('debug')('app:dependency-resolver');
 let assert = require('assert');
 let Iterate = require('taskcluster-lib-iterate');
 
@@ -90,7 +89,7 @@ class DependencyResolver {
       }
     }));
 
-    this.monitor.log.resolvedQueuePoll({
+    this.monitor.log.azureQueuePoll({
       messages: messages.length,
       failed,
       resolver: 'dependency',
